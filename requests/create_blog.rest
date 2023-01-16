@@ -1,0 +1,20 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+  "title": "cooking with cans",
+  "author": "rob m",
+  "url": "www.amateurhourcooking.com",
+  "likes": 0
+}
+
+###
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+  "title": "cooking from the finer things club",
+  "author": "jennie m",
+  "url": "www.procooking.com",
+  "likes": 0
+}
