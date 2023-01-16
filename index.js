@@ -53,6 +53,30 @@ app.get('/api/blogs', async (req, res) => {
   res.json(blogs)
 })
 
+app.get('/api/blogs/:id', async (req, res) => {
+  const blog = await Blog.findByPk(req.params.id)
+  console.log(blog)
+  res.json(blog)
+})
+
+app.delete('/api/blogs/:id', async (req, res) => {
+  const count = await Blog.destroy({ where: { id: req.params.id } })
+  console.log(`deleted row(s): ${count}`)
+  res.status(204).end()
+})
+
+app.put('/api/blogs/:id/like', async (req, res) => {
+  const blog = await Blog.findByPk(req.params.id)
+  console.log(blog)
+  if (blog) {
+    blog.likes += 1
+    await blog.save()
+    res.json(blog)
+  } else {
+    res.status(40).end()
+  }
+})
+
 app.post('/api/blogs', async (req, res) => {
   console.log(req.body)
   try {
