@@ -1,9 +1,14 @@
 const router = require('express').Router()
+require('express-async-errors')
 
 const { Blog } = require('../models')
 
 const blogFinder = async (req, res, next) => {
-  req.blog = await Blog.findByPk(req.params.id)
+  try {
+    req.blog = await Blog.findByPk(req.params.id)
+  } catch (err) {
+    next(err)
+  }
   next()
 }
 
