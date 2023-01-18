@@ -52,7 +52,9 @@ router.get('/', async (req, res) => {
       attributes: ['name'],
     },
     where,
+    order: [['likes', 'DESC']],
   })
+  // blogs.map((blog) => console.log(JSON.stringify(blog))) // log to console
   res.json(blogs)
 })
 
