@@ -6,7 +6,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvY
   "title": "cooking with cans",
   "author": "rob m",
   "url": "www.amateurhourcooking.com",
-  "likes": 0
+  "likes": 0,
+  "year": 2000
 }
 
 ###
@@ -18,5 +19,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvY
   "title": "cooking from the finer things club",
   "author": "jennie m",
   "url": "www.procooking.com",
-  "likes": 0
+  "likes": 0,
+  "year": 1991
 }

@@ -27,6 +27,13 @@ Blog.init(
       allowNull: 0,
       defaultValue: 0,
     },
+    year: {
+      type: DataTypes.INTEGER,
+      validate: {
+        min: '1991',
+        max: '2023',
+      },
+    },
   },
   {
     sequelize,
